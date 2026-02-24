@@ -1,5 +1,38 @@
 import random
 import streamlit as st
+# Page settings
+st.set_page_config(page_title="Flirty Line Generator 💘", page_icon="💘")
+
+# Custom CSS for styling
+st.markdown("""
+<style>
+body {
+    background: linear-gradient(to right, #ff4e50, #fc913a);
+}
+.big-title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+.line-box {
+    font-size: 22px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+div.stButton > button {
+    background-color: #ff0066;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+</style>
+""", unsafe_allow_html=True)
 
 flirt_lines = [
 "Are you a magician? Because whenever I look at you, everyone else disappears.",
@@ -81,12 +114,19 @@ flirt_lines = [
     # ... (add more as above)
 
 ]
+st.markdown('<div class="big-title">💘 Flirty Line Generator 💘</div>', unsafe_allow_html=True)
 
-st.title("💘 Flirty Line Generator")
-st.markdown("<style>body { background-color: #fa8fe6; }</style>", unsafe_allow_html=True)
+st.write(" ")
+st.write("Click the button and make someone smile 😉")
 
-st.write("Click the button to get a flirty line 😉")
+if "current_line" not in st.session_state:
+    st.session_state.current_line = ""
 
-if st.button("Generate Flirt Line"):
+if st.button("Generate Flirt Line 💌"):
+    st.session_state.current_line = random.choice(flirt_lines)
+    st.balloons()
 
-    st.success(random.choice(flirt_lines))
+if st.session_state.current_line:
+    st.markdown(f'<div class="line-box">{st.session_state.current_line}</div>', unsafe_allow_html=True)
+    
+    st.code(st.session_state.current_line)
