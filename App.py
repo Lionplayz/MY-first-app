@@ -52,32 +52,32 @@ flirt_lines = [
 "You’re like sunshine— you make everything brighter.",
 "Are you an artist? Because you just drew my attention.",
 "Is your heart a prison? Because I want a life sentence.",
-"I must be a snowman… because you just made me melt."
-"Are you made of copper and tellurium? Because you’re Cu-Te."
-"I think my phone is broken… it doesn’t have your number in it."
-"Are you a time traveler? Because I see you in my future."
-"I didn’t believe in love at first sight… until you proved me wrong."
-"If looks could kill, you’d be a weapon of mass distraction."
-"I must be a snowflake, because I’ve fallen for you."
-"You don’t need makeup — you already painted my world perfect."
-"I think you just hacked my heart… now it only beats for you."
-"If being cute were a sport, you’d win gold every time."
-"I wasn’t planning on smiling today… then I saw you."
-"Are you a playlist? Because every moment with you is my favorite track."
-"I don’t need directions anymore — I’ve already found my destination."
-"You walked in… and suddenly my standards went way up."
-"I should charge you rent… you’ve been living in my mind all day."
-"Are you a shooting star? Because my wish just came true."
-"I don’t need a GPS — my heart always leads me to you."
-"You must be my lucky charm, because everything feels better around you."
-"I think even my shadow gets jealous when I look at you."
-"Are you made of sugar? Because you’re dangerously sweet."
-"If charm were currency, you’d be a billionaire."
-"I didn’t know angels were allowed on Earth."
-"You’re not just a vibe… you’re the whole mood."
-"I was fine before I met you… now I’m better."
-"If my heart had a lock, you’d be the only key."
-"I think you just upgraded my day from normal to unforgettable."
+"I must be a snowman… because you just made me melt.",
+"Are you made of copper and tellurium? Because you’re Cu-Te.",
+"I think my phone is broken… it doesn’t have your number in it.",
+"Are you a time traveler? Because I see you in my future.",
+"I didn’t believe in love at first sight… until you proved me wrong.",
+"If looks could kill, you’d be a weapon of mass distraction.",
+"I must be a snowflake, because I’ve fallen for you.",
+"You don’t need makeup — you already painted my world perfect.",
+"I think you just hacked my heart… now it only beats for you.",
+"If being cute were a sport, you’d win gold every time.",
+"I wasn’t planning on smiling today… then I saw you.",
+"Are you a playlist? Because every moment with you is my favorite track.",
+"I don’t need directions anymore — I’ve already found my destination.",
+"You walked in… and suddenly my standards went way up.",
+"I should charge you rent… you’ve been living in my mind all day.",
+"Are you a shooting star? Because my wish just came true.",
+"I don’t need a GPS — my heart always leads me to you.",
+"You must be my lucky charm, because everything feels better around you.",
+"I think even my shadow gets jealous when I look at you.",
+"Are you made of sugar? Because you’re dangerously sweet.",
+"If charm were currency, you’d be a billionaire.",
+"I didn’t know angels were allowed on Earth.",
+"You’re not just a vibe… you’re the whole mood.",
+"I was fine before I met you… now I’m better.",
+"If my heart had a lock, you’d be the only key.",
+"I think you just upgraded my day from normal to unforgettable.",
     # ... (add more as above)
 
 ]
@@ -88,4 +88,5 @@ st.markdown("<style>body { background-color: #fa8fe6; }</style>", unsafe_allow_h
 st.write("Click the button to get a flirty line 😉")
 
 if st.button("Generate Flirt Line"):
+
     st.success(random.choice(flirt_lines))
