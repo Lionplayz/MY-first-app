@@ -124,7 +124,7 @@ if "current_line" not in st.session_state:
 
 if st.button("Generate Flirt Line 💌"):
     st.session_state.current_line = random.choice(flirt_lines)
-    st.balloons()
+    st.hearts()
 
 if st.session_state.current_line:
     st.markdown(f'<div class="line-box">{st.session_state.current_line}</div>', unsafe_allow_html=True)
