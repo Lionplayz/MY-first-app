@@ -1,7 +1,7 @@
 import random
 import streamlit as st
 # Page settings
-st.set_page_config(page_title="Flirty Line Generator 💘", page_icon="💘")
+st.set_page_config(page_title="Flirty Line Generator ")
 
 # Custom CSS for styling
 st.markdown("""
@@ -114,7 +114,7 @@ flirt_lines = [
     # ... (add more as above)
 
 ]
-st.markdown('<div class="big-title">💘 Flirty Line Generator 💘</div>', unsafe_allow_html=True)
+st.markdown('<div class="big-title"> Flirty Line Generator </div>', unsafe_allow_html=True)
 
 st.write(" ")
 st.write("Click the button and make someone smile 😉")
@@ -124,7 +124,6 @@ if "current_line" not in st.session_state:
 
 if st.button("Generate Flirt Line 💌"):
     st.session_state.current_line = random.choice(flirt_lines)
-    st.snow()
 
 if st.session_state.current_line:
     st.markdown(f'<div class="line-box">{st.session_state.current_line}</div>', unsafe_allow_html=True)
